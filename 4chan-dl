@@ -1,4 +1,18 @@
 #!/bin/bash
+
+# Neru License
+# Version 3, 15th June 2012
+#
+#
+# Chu's permitted to copy and distribute verbatim or modified
+# copies of this license document, and changing it is allowed as long
+# as the name is changed, but it would be nice if you followed the terms below.
+#
+# TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+#
+# 0. Chu should try to be nice and stuff but other than that do whatever. =w=
+# 1. Also, chu have to go get a cup of cappuccino and stuff (though if you do not like cappuccino you can choose to give it to someone else)
+
 COUNT=0
 REFRESH=60
 until [ $(curl -o /dev/null --silent --head --write-out '%{http_code}\n' $1) -eq 404 ]; do
