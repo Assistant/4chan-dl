@@ -23,7 +23,7 @@ until [ $(curl -o /dev/null --silent --head --write-out '%{http_code}\n' $1) -eq
 			wget -q ${image}
 			COUNT=$(echo ${image} | sed 's/.*\///;s/\..*//')
 		fi
-	done < <(wget -q -O - ${1} | grep -Eo 'i.4cdn.org/[^"]+' | uniq)
+	done < <(wget -q -O - ${1} | grep -Eo 'i[a-Z0-9]*\.4cdn.org/[a-z0-9]+/[0-9]+\.[^"]+' | uniq)
 	echo "End of page, refreshing in ${REFRESH} second(s)"
 	sleep ${REFRESH}
 done
